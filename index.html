@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+  <head>
+    <title>Damocles</title>
+    <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicons/favicon2.svg">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Damocles"/>
+    <meta name="author" content="Emanuel Teodoro Correa Loyola">
+    <meta name="keywords" content="deports, deport, extrem, extremo, viajes, fotografia, deporte extremo">
+    <meta name="description" content="Damocles es un sitio web donde podrás subir y ver los mejores lugares para hacer deporte extremo al rededor del mundo."/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+
+  <body>
+
+    <header>
+      <div class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+          <a href="interfaz.html">
+            <img src="assets/images/logo/sda.png" width="150" alt="Logo">
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container-fluid mt-4 menu">
+      <div class="row">
+
+        <div class="col-md-1 d-none d-md-block">
+          <div class="offcanvas-body p-0">
+            <ul id="sidebar" class="nav flex-column bg-light p-3 sidebar">
+              <li class="nav-item">
+                <a href="interfaz.html" class="nav-link">
+                  <img src="assets/images/icon/fas/home.svg" width="30" alt="Home">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img src="assets/images/icon/fas/buzon.svg" width="30" alt="Buzón">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/pages/snow/blog.html" class="nav-link">
+                  <img src="assets/images/icon/fas/perfil.png" width="30" alt="Perfil">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link">
+                  <img src="assets/images/icon/fas/blog.svg" width="30" alt="Blog">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <img src="assets/images/icon/fas/configuraciones.png" width="30" alt="Configuraciones">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 posts">
+<!--!PUBLICACIONES NUEVAS-->
+          <section class="mb-5 bg-white p-4 rounded shadow-sm">
+            <form id="postForm">
+              <div class="form-group">
+                <label for="newPost">Sube tu viaje</label>
+                <textarea class="form-control" id="newPost" rows="3" placeholder="Escribe tu mensaje aquí..." required></textarea>
+              </div>
+              <div class="btn-group mt-2">
+                <button type="submit" class="btn btn-primary">
+                  <img src="assets/images/icon/fas/send.svg" width="20" alt="Publicar"> Publicar
+                </button>
+              </div>
+            </form>
+          </section>
+  <!--!VERIFICACION DE PUBLICACIONES NUEVAS-->
+          <div id="postAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+            ¡Tu publicación ha sido subida con éxito!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+  
+
+          <section class="post mb-4 bg-white p-4 rounded shadow-sm position-relative" onclick="expandPost(this)">
+            <div class="media align-items-center">
+              <a href="pages/snow/blog.html">
+                <img src="assets/images/perfiles/calamaro.jpg" class="mr-3 rounded-circle profile-pic" alt="Foto de perfil" width="64">
+              </a>
+              <div class="media-body">
+                <a href="pages/snow/blog.html" class="text-dark text-decoration-none">
+                  <h5 class="mt-0">Andrés Calamaro</h5>
+                </a>
+                <a class="badge rounded-pill bg-light text-dark text-decoration-none badge-animation" href="#!">Nieve</a>
+                <a class="badge rounded-pill bg-danger text-decoration-none" href="#!">Suiza</a>
+                <p class="text-muted"><small>Publicado hace 15 minutos</small></p>
+              </div>
+              <div class="post-options">
+                <a href="#"><img src="assets/images/icon/fas/linea.png" width="20" alt="Más opciones"></a>
+              </div>
+            </div>
+            <a href="pages/snow/blog.html"><img src="assets/images/deports/snowboarding/snowbording.jpg" class="img-fluid rounded my-3 post-image" alt="Snowboarding en Suiza"></a>
+            <p class="post-content">El snowboarding en Suiza es una experiencia inigualable...</p>
+            <div class="interaction-buttons">
+              <a href="#"><img src="assets/images/icon/fas/comentario.png" width="20" alt="Comentar"></a>
+              <a href="#"><img src="assets/images/icon/fas/corazon.png" width="20" alt="Me gusta"></a>
+            </div>
+          </section>
+  
+          <section class="post mb-4 bg-white p-4 rounded shadow-sm position-relative" onclick="expandPost(this)">
+            <div class="media align-items-center">
+              <a href="pages/surf/blog.html">
+                <img src="assets/images/perfiles/Adrián Barilari.png" class="mr-3 rounded-circle profile-pic" alt="Foto de perfil" width="64">
+              </a>
+              <div class="media-body">
+                <a href="pages/surf/blog.html" class="text-dark text-decoration-none">
+                  <h5 class="mt-0">Adrián Barilari</h5>
+                </a>
+                <a class="badge rounded-pill bg-light text-dark text-decoration-none badge-animation" href="#!">Mar</a>
+                <a class="badge rounded-pill bg-danger text-decoration-none" href="#!">Hawai</a>
+                <p class="text-muted"><small>Publicado hace 20 minutos</small></p>
+              </div>
+              <div class="post-options">
+                <a href="#"><img src="assets/images/icon/fas/linea.png" width="20" alt="Más opciones"></a>
+              </div>
+            </div>
+            <a href="pages/surf/blog.html"><img src="assets/images/deports/surfing/surf.jpg" class="img-fluid rounded my-3 post-image" alt="Snowboarding en Suiza"></a>
+            <p class="post-content">...</p>
+            <div class="interaction-buttons">
+              <a href="#"><img src="assets/images/icon/fas/comentario.png" width="20" alt="Comentar"></a>
+              <a href="#"><img src="assets/images/icon/fas/corazon.png" width="20" alt="Me gusta"></a>
+            </div>
+          </section>
+          <section class="post mb-4 bg-white p-4 rounded shadow-sm position-relative" onclick="expandPost(this)">
+            <div class="media align-items-center">
+              <a href="pages/escalada/blog.html">
+                <img src="assets/images/perfiles/carl-sagan.png" class="mr-3 rounded-circle profile-pic" alt="Foto de perfil" width="64">
+              </a>
+              <div class="media-body">
+                <a href="pages/escalada/blog.html" class="text-dark text-decoration-none">
+                  <h5 class="mt-0">Carl Sagan</h5>
+                </a>
+                <a class="badge badge-pill badge-success text-dark text-decoration-none badge-animation" href="#!">Montaña</a>
+                <a class="badge rounded-pill bg-danger text-decoration-none" href="#!">Peru</a>
+                <p class="text-muted"><small>Publicado hace 15 minutos</small></p>
+              </div>
+              <div class="post-options">
+                <a href="#"><img src="assets/images/icon/fas/linea.png" width="20" alt="Más opciones"></a>
+              </div>
+            </div>
+            <a href="pages/escalada/blog.html"><img src="assets/images/deports/escalada/escalador.jpg" class="img-fluid rounded my-3 post-image" alt="Snowboarding en Suiza"></a>
+            <p class="post-content">El snowboarding en Suiza es una experiencia inigualable...</p>
+            <div class="interaction-buttons">
+              <a href="#"><img src="assets/images/icon/fas/comentario.png" width="20" alt="Comentar"></a>
+              <a href="#"><img src="assets/images/icon/fas/corazon.png" width="20" alt="Me gusta"></a>
+            </div>
+          </section>
+          <section class="post mb-4 bg-white p-4 rounded shadow-sm position-relative" onclick="expandPost(this)">
+            <div class="media align-items-center">
+              <a href="pages/motocross/blog.html">
+                <img src="assets/images/perfiles/tyson.jpg" class="mr-3 rounded-circle profile-pic" alt="Foto de perfil" width="64">
+              </a>
+              <div class="media-body">
+                <a href="pages/motocross/blog.html" class="text-dark text-decoration-none">
+                  <h5 class="mt-0">Neil Tyson</h5>
+                </a>
+                <a class="badge rounded-pill bg-light text-dark text-decoration-none badge-animation" href="#!">Mexico</a>
+                <a class="badge rounded-pill bg-danger text-decoration-none" href="#!">Everest</a>
+                <p class="text-muted"><small>Publicado hace 55 minutos</small></p>
+              </div>
+              <div class="post-options">
+                <a href="#"><img src="assets/images/icon/fas/linea.png" width="20" alt="Más opciones"></a>
+              </div>
+            </div>
+            <a href="pages/motocross/blog.html"><img src="assets/images/deports/motocross/moto.jpg" class="img-fluid rounded my-3 post-image" alt="Snowboarding en Suiza"></a>
+            <p class="post-content">El snowboarding en Suiza es una experiencia inigualable...</p>
+            <div class="interaction-buttons">
+              <a href="#"><img src="assets/images/icon/fas/comentario.png" width="20" alt="Comentar"></a>
+              <a href="#"><img src="assets/images/icon/fas/corazon.png" width="20" alt="Me gusta"></a>
+            </div>
+          </section>
+          <section class="post mb-4 bg-white p-4 rounded shadow-sm position-relative" onclick="expandPost(this)">
+            <div class="media align-items-center">
+              <a href="pages/paraidas/blog.html">
+                <img src="assets/images/perfiles/charly.png" class="mr-3 rounded-circle profile-pic" alt="Foto de perfil" width="64">
+              </a>
+              <div class="media-body">
+                <a href="pages/paraidas/blog.html" class="text-dark text-decoration-none">
+                  <h5 class="mt-0">Charly Garcia</h5>
+                </a>
+                <a class="badge rounded-pill bg-light text-dark text-decoration-none badge-animation" href="#!">Monta;a</a>
+                <a class="badge rounded-pill bg-danger text-decoration-none" href="#!">Everest</a>
+                <p class="text-muted"><small>Publicado hace 15 minutos</small></p>
+              </div>
+              <div class="post-options">
+                <a href="#"><img src="assets/images/icon/fas/linea.png" width="20" alt="Más opciones"></a>
+              </div>
+            </div>
+            <a href="pages/paraidas/blog.html"><img src="assets/images/deports/paracaidismo/glinder.jpg" class="img-fluid rounded my-3 post-image" alt="Snowboarding en Suiza"></a>
+            <p class="post-content">El snowboarding en Suiza es una experiencia inigualable...</p>
+            <div class="interaction-buttons">
+              <a href="#"><img src="assets/images/icon/fas/comentario.png" width="20" alt="Comentar"></a>
+              <a href="#"><img src="assets/images/icon/fas/corazon.png" width="20" alt="Me gusta"></a>
+            </div>
+          </section>
+        </div>
+  
+
+        <div class="col-md-3">
+          <aside class="mt-4">
+            <h4 class="mb-3">Personas cercanas</h4>
+            <ul class="list-group">
+
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="pages/escalada/blog.html"><img src="assets/images/perfiles/carl-sagan.png" alt="Perfil" width="40" class="rounded-circle"> Carl Sagan</a>
+                <button id="addPersonBtn" type="button" class="btn btn-success">+ Agregar</button>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="#"><img src="assets/images/perfiles/chema.jpeg" alt="Perfil" width="40" class="rounded-circle"> Chema Alonso</a>
+                <button id="addPersonBtn" type="button" class="btn btn-success">+ Agregar</button>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="pages/surf/blog.html"><img src="assets/images/perfiles/Adrián Barilari.png" alt="Perfil" width="40" class="rounded-circle"> Adrián Barilari</a>
+                <button id="addPersonBtn" type="button" class="btn btn-success">+ Agregar</button>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <a href="pages/motocross/blog.html"><img src="assets/images/perfiles/tyson.jpg" alt="Perfil" width="40" class="rounded-circle">Neil Tyson</a>
+                <button id="addPersonBtn" type="button" class="btn btn-success">+ Agregar</button>
+              </li>
+<!--?Colocar o no <!--! buascar mas xd-->
+            </ul>
+  
+            <h4 class="mt-4">Zonas peligrosas</h4>
+            <ul class="list-group">
+              <li class="list-group-item bg-danger text-white">Kursk  - Rusia</li>
+              <li class="list-group-item bg-danger text-white">Crimea  - Ucrania</li>
+              <li class="list-group-item bg-danger text-white">Cisjordani -  Israel</li>
+            </ul>
+  
+            <h4 class="mt-4">Zonas para practicar deporte extremo</h4>
+            <ul class="list-group">
+              <li class="list-group-item">Interlaken, Suiza</li>
+              <li class="list-group-item">Rotorua, Nueva Zelanda</li>
+              <li class="list-group-item">Cañón del Río Güejar, Colombia</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer class="py-3">
+      <div class="container text-center">
+        <p>&copy; 2024. Todos los derechos reservados.</p>
+        <p><small>Emanuel Teodoro Correa Loyola</small></p>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="main.js"></script> 
+  </body>
+
+
+</html>
+
